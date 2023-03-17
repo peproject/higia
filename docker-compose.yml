@@ -1,0 +1,21 @@
+version: "3.4"
+
+services:
+  database:
+    image: mariadb:10.9.5
+    container_name: mariadb
+    ports:
+      - "3306:3306"
+    expose:
+      - 3306
+    volumes:
+      - db-volume:/var/lib/mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: 1VbJa8QZw0iSCsU
+      MARIADB_USER: usr_higia
+      MARIADB_PASSWORD: UUdM1zGb5tyxZ8G
+      MARIADB_DATABASE: db_higia
+
+volumes:
+  db-volume:
